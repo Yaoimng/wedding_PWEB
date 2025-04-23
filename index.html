@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah & Michael - Wedding Invitation</title>
+    <meta name="description" content="Join us to celebrate the wedding of Sarah and Michael">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Sarah & Michael - Wedding Invitation">
+    <meta property="og:description" content="Join us to celebrate our special day!">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:url" content="https://sarahandmichael.com">
+</head>
+<body>
+    <!-- Envelope Animation Container -->
+    <div class="envelope-container" id="envelope">
+        <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-content">
+                <div class="invitation-card">
+                    <h1>Sarah & Michael</h1>
+                    <p class="invite-text">Invite you to celebrate their wedding</p>
+                    <p class="date">September 15, 2025</p>
+                    <button id="open-invitation" class="btn-primary">Open Invitation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (Initially Hidden) -->
+    <div class="main-content hidden" id="main-content">
+        <!-- Header with Navigation -->
+        <header class="header" id="header">
+            <div class="logo">S & M</div>
+            <nav class="navbar">
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#couple" class="nav-link">Our Story</a></li>
+                    <li><a href="#details" class="nav-link">Details</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+                    <li><a href="#registry" class="nav-link">Registry</a></li>
+                    <li><a href="#travel" class="nav-link">Travel & Stay</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="couple-names">Sarah & Michael</h1>
+                <p class="wedding-date">September 15, 2025</p>
+                <div class="countdown-container">
+                    <div class="countdown" id="countdown">
+                        <div class="time-segment">
+                            <span id="days">00</span>
+                            <p>Days</p>
+                        </div>
+                        <div class="time-segment">
+                            <span id="hours">00</span>
+                            <p>Hours</p>
+                        </div>
+                        <div class="time-segment">
+                            <span id="minutes">00</span>
+                            <p>Minutes</p>
+                        </div>
+                        <div class="time-segment">
+                            <span id="seconds">00</span>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#details" class="btn-hero scroll-link">Event Details</a>
+                <a href="#rsvp" class="btn-hero scroll-link">RSVP</a>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- Couple Section -->
+        <section id="couple" class="couple section-padding">
+            <div class="container">
+                <h2 class="section-title">Our Story</h2>
+                <div class="couple-intro">
+                    <p>We are so excited to celebrate our special day with our family and friends. Thank you for being a part of our journey.</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">June 15, 2020</div>
+                        <div class="timeline-content">
+                            <h3>First Met</h3>
+                            <p>We met at a mutual friend's birthday party and instantly connected over our shared love of hiking and indie films.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">December 24, 2021</div>
+                        <div class="timeline-content">
+                            <h3>First Date</h3>
+                            <p>We went to a small Italian restaurant followed by a walk along the river promenade under the holiday lights.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">July 4, 2023</div>
+                        <div class="timeline-content">
+                            <h3>The Proposal</h3>
+                            <p>Michael proposed during our hiking trip to the mountains, with a breathtaking sunrise backdrop.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">September 15, 2025</div>
+                        <div class="timeline-content">
+                            <h3>Wedding Day</h3>
+                            <p>The day we officially begin our forever, surrounded by those we love.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Details Section -->
+        <section id="details" class="details section-padding">
+            <div class="container">
+                <h2 class="section-title">Event Details</h2>
+                
+                <div class="event-cards">
+                    <div class="event-card ceremony-card">
+                        <div class="card-icon"><i class="fas fa-ring"></i></div>
+                        <h3>Ceremony</h3>
+                        <p class="event-time">2:00 PM - 3:30 PM</p>
+                        <p class="event-location">Masjid Agung</p>
+                        <p class="event-address">Jl. MT Haryono</p>
+                        <a href="#" class="btn-secondary location-btn" data-location="St. Mary's Cathedral, Springfield">View Map</a>
+                    </div>
+                    
+                    <div class="event-card reception-card">
+                        <div class="card-icon"><i class="fas fa-glass-cheers"></i></div>
+                        <h3>Reception</h3>
+                        <p class="event-time">4:00 PM - 11:00 PM</p>
+                        <p class="event-location">ShangriLa Hotel</p>
+                        <p class="event-address">Jl. Wiyung Barat 356 Surabaya</p>
+                        <a href="#" class="btn-secondary location-btn" data-location="Grand Plaza Hotel, Springfield">View Map</a>
+                    </div>
+                </div>
+                
+                <div class="map-container" id="location-map">
+                    <div id="map"></div>
+                    <button class="close-map" id="close-map"><i class="fas fa-times"></i></button>
+                </div>
+                
+                <div class="dress-code">
+                    <h3>Dress Code</h3>
+                    <p>Formal / Black Tie Optional</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery section-padding">
+            <div class="container">
+                <h2 class="section-title">Our Gallery</h2>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1576694667642-6f289dd54187?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Couple at beach" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1575397282682-019521195f17?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Couple hiking" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://plus.unsplash.com/premium_photo-1726711297332-1941f3460405?q=80&w=1998&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Engagement photo" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1674818534586-78ababb77227?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Date night" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1589988466187-d45e356f59d7?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Travel memory" class="gallery-img">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1670786611555-5218c1407492?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Holiday celebration" class="gallery-img">
+                    </div>
+                </div>
+                
+                <div class="lightbox" id="lightbox">
+                    <div class="lightbox-content">
+                        <img src="https://images.unsplash.com/photo-1596581836579-a999ca6b27e7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" id="lightbox-img">
+                        <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+                        <button class="lightbox-nav prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="lightbox-nav next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="rsvp section-padding">
+            <div class="container">
+                <h2 class="section-title">RSVP</h2>
+                <p class="rsvp-intro">We'd be delighted to have you join us on our special day. Please let us know if you can make it by September 15, 2025.</p>
+                
+                <form id="rsvp-form" class="rsvp-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Will you attend?</label>
+                        <div class="radio-group">
+                            <input type="radio" id="attending-yes" name="attending" value="yes" required>
+                            <label for="attending-yes">Joyfully Accept</label>
+                            
+                            <input type="radio" id="attending-no" name="attending" value="no">
+                            <label for="attending-no">Regretfully Decline</label>
+                        </div>
+                        <span class="error-message" id="attending-error"></span>
+                    </div>
+                    
+                    <div class="form-group guests-group" id="guests-group">
+                        <label for="guests">Number of Guests (including yourself)</label>
+                        <select id="guests" name="guests">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dietary">Dietary Restrictions</label>
+                        <textarea id="dietary" name="dietary" rows="3" placeholder="Please let us know of any dietary restrictions or allergies."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message to the Couple (Optional)</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Submit RSVP</button>
+                </form>
+                
+                <div id="form-success" class="form-success hidden">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You!</h3>
+                    <p>Your RSVP has been successfully submitted. We look forward to celebrating with you!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registry Section -->
+        <section id="registry" class="registry section-padding">
+            <div class="container">
+                <h2 class="section-title">Gift Registry</h2>
+                <p class="registry-intro">Your presence at our wedding is the greatest gift of all. However, if you wish to help us celebrate with a gift, we've registered at the following:</p>
+                
+                <div class="registry-cards">
+                    <div class="registry-card">
+                        <img src="https://images.unsplash.com/photo-1524480274200-4f55846d2d0d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amazon Registry" class="registry-logo">
+                        <h3>Amazon</h3>
+                        <a href="https://www.amazon.com/wedding/registry" class="btn-secondary" target="_blank">View Registry</a>
+                    </div>
+                    
+                    <div class="registry-card">
+                        <img src="https://images.unsplash.com/photo-1577905027671-c5cc33c825ed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Target Registry" class="registry-logo">
+                        <h3>Target</h3>
+                        <a href="https://www.target.com/gift-registry/wedding" class="btn-secondary" target="_blank">View Registry</a>
+                    </div>
+                    
+                    <div class="registry-card">
+                        <img src="https://images.unsplash.com/photo-1615438969112-a58e50dd9f15?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Honeymoon Fund" class="registry-logo">
+                        <h3>Honeymoon Fund</h3>
+                        <a href="#" class="btn-secondary" target="_blank">Contribute</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel & Accommodations Section -->
+        <section id="travel" class="travel section-padding">
+            <div class="container">
+                <h2 class="section-title">Travel & Accommodations</h2>
+                <p class="travel-intro">For our out-of-town guests, we've compiled some information to help make your trip planning easier.</p>
+                
+                <div class="accommodation-cards">
+                    <div class="accommodation-card">
+                        <div class="card-icon"><i class="fas fa-hotel"></i></div>
+                        <h3>ShangriLa</h3>
+                        <p class="hotel-details">$180-$220 per night</p>
+                        <p class="hotel-address">Jl. Wiyung Barat 345 Surabaya</p>
+                        <p>Special rate for wedding guests. Mention "Smith-Johnson Wedding" when booking.</p>
+                        <a href="tel:+15551234567" class="hotel-contact"><i class="fas fa-phone"></i> (555) 123-4567</a>
+                        <a href="#" class="btn-secondary" target="_blank">Book Now</a>
+                    </div>
+                    
+                    <div class="accommodation-card">
+                        <div class="card-icon"><i class="fas fa-hotel"></i></div>
+                        <h3>Riverside Inn</h3>
+                        <p class="hotel-details">$120-$150 per night</p>
+                        <p class="hotel-address">789 River Road, Springfield</p>
+                        <p>Located 10 minutes from the venue. Complimentary breakfast and shuttle service.</p>
+                        <a href="tel:+15559876543" class="hotel-contact"><i class="fas fa-phone"></i> (555) 987-6543</a>
+                        <a href="#" class="btn-secondary" target="_blank">Book Now</a>
+                    </div>
+                </div>
+                
+                <div class="transportation">
+                    <h3>Transportation</h3>
+                    <div class="transport-info">
+                        <div class="transport-icon"><i class="fas fa-plane"></i></div>
+                        <div class="transport-details">
+                            <h4>By Air</h4>
+                            <p>The nearest airport is Springfield International Airport (SPI), approximately 20 minutes from the venue.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-info">
+                        <div class="transport-icon"><i class="fas fa-car"></i></div>
+                        <div class="transport-details">
+                            <h4>By Car</h4>
+                            <p>Complimentary parking is available at both the ceremony and reception venues.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-info">
+                        <div class="transport-icon"><i class="fas fa-shuttle-van"></i></div>
+                        <div class="transport-details">
+                            <h4>Shuttle Service</h4>
+                            <p>We will be providing shuttle service between the recommended hotels and the venue. Schedule will be provided closer to the wedding date.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <h2 class="footer-title">Sarah & Michael</h2>
+                <p class="footer-date">September 15, 2025</p>
+                
+                <div class="contact-info">
+                    <p>For any questions, please contact:</p>
+                    <a href="mailto:info@sarahandmichael.com">info@sarahandmichael.com</a>
+                    <a href="tel:+15551234567">(+62) 852 31271223</a>
+                </div>
+                
+                <div class="social-share">
+                    <p>Share Our Joy:</p>
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <p class="copyright">&copy; 2025 Sarah & Michael. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Google Maps API (Replace with your API key) -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+</html>

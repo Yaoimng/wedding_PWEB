@@ -1,0 +1,185 @@
+/*----------------------------------------------
+ * Wedding Invitation Website - Animations
+ * Author: [Your Name]
+ * Version: 1.0
+ *----------------------------------------------*/
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.15);
+    }
+    28% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(1.15);
+    }
+    70% {
+        transform: scale(1);
+    }
+}
+
+/* ===== ENVELOPE ANIMATION ===== */
+.envelope.opened {
+    transform: scale(1.05);
+}
+
+.envelope.opened .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope-content {
+    animation: fadeIn 1s ease 0.2s forwards;
+    opacity: 0;
+}
+
+/* ===== SECTION ANIMATIONS ===== */
+.hero-content {
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.couple-names, .wedding-date {
+    opacity: 0;
+    animation: slideInUp 1s ease 0.5s forwards;
+}
+
+.countdown-container {
+    opacity: 0;
+    animation: slideInUp 1s ease 0.8s forwards;
+}
+
+.btn-hero {
+    opacity: 0;
+    animation: slideInUp 1s ease 1.1s forwards;
+}
+
+/* ===== ELEMENTS ANIMATIONS ===== */
+.section-title {
+    position: relative;
+    opacity: 0;
+}
+
+.section-title.animate {
+    animation: slideInUp 1s ease forwards;
+}
+
+.timeline-item {
+    opacity: 0;
+}
+
+.timeline-item.animate:nth-child(odd) {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.timeline-item.animate:nth-child(even) {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.event-card, .registry-card, .accommodation-card {
+    opacity: 0;
+}
+
+.event-card.animate, .registry-card.animate, .accommodation-card.animate {
+    animation: slideInUp 0.8s ease forwards;
+}
+
+.gallery-item {
+    opacity: 0;
+}
+
+.gallery-item.animate {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* ===== INTERACTIVE ANIMATIONS ===== */
+.btn-primary:hover, .btn-secondary:hover, .btn-hero:hover {
+    animation: pulse 0.8s ease infinite;
+}
+
+.card-icon {
+    transition: all 0.3s ease;
+}
+
+.event-card:hover .card-icon, 
+.accommodation-card:hover .card-icon {
+    animation: heartBeat 1s ease;
+    color: var(--accent-color);
+}
+
+/* ===== LOADER ANIMATION ===== */
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--secondary-color);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
